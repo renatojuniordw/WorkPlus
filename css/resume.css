@@ -145,3 +145,13 @@ a {
 a:hover, a:focus, a:active {
   color: #824027;
 }
+
+#descVaga{
+  max-width: 100%;
+  min-width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 135px;
+  min-height: 100px;
+  max-height: 100px;
+}

@@ -10,21 +10,28 @@
   <!-- firebase -->
   <script src="node_modules/firebaseui/dist/firebaseui.js"></script>
   <link type="text/css" rel="stylesheet" href="node_modules/firebaseui/dist/firebaseui.css" />
-
-  <title>Resume - Start Bootstrap Theme</title>
-
+  
+  <title>JOBS BLACKPLUS</title>
+  
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script src="js/configFire.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+  
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+  
   <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-
+  
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet">
+  <script src="js/login.js"></script>
 
 </head>
 
@@ -32,7 +39,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none">Start Bootstrap</span>
+      <span class="d-block d-lg-none">JOBS BLACKPLUS</span>
       <span class="d-none d-lg-block">
         <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
       </span>
@@ -56,11 +63,11 @@
           <a class="nav-link js-scroll-trigger" href="#Empresas">Empresas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+          <a class="nav-link js-scroll-trigger" href="#procureVaga">Procure uma vaga</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </nav>
@@ -142,28 +149,16 @@
         <h2 class="mb-5">Empresas</h2>
 
         <div class="subheading mb-3">Cadastrar Vagas</div>
-
-
-        <div class="align-items-centery inputLogin">
-          <div class="col-md-4">
-            <input type="email" name="" id="" class="form-control">
-          </div>
-          <div class="col-md-4">
-            <input type="password" name="" id="" class="form-control">
-          </div>
-          <div class="col-md-4">
-            <button type="submit" class="btn btn">Entrar</button>
-          </div>
-
-        </div>
+        <p>Para anunciar uma vaga é necessário se autenticar, área exclusiva para empresas.</p>
+        <div id="firebaseui-auth-container"></div>
 
 
       </div>
     </section>
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="procureVaga">
       <div class="my-auto">
-        <h2 class="mb-5">Interests</h2>
+        <h2 class="mb-5">Procure uma vaga</h2>
         <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skiier and
           novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
         <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring
@@ -171,7 +166,7 @@
           development world.</p>
       </div>
     </section>
-
+<!-- 
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
       <div class="my-auto">
         <h2 class="mb-5">Awards &amp; Certifications</h2>
@@ -210,34 +205,9 @@
               Place - James Buchanan High School - Hackathon 2005</li>
         </ul>
       </div>
-    </section>
+    </section> -->
 
   </div>
-
-  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBjS4qun9xBpkY_uqqrBYW2BE5joRPxLIM",
-      authDomain: "work-plus.firebaseapp.com",
-      databaseURL: "https://work-plus.firebaseio.com",
-      projectId: "work-plus",
-      storageBucket: "",
-      messagingSenderId: "518362540746"
-    };
-    firebase.initializeApp(config);
-  </script>
-
-  <script src="/__/firebase/4.12.1/firebase-app.js"></script>
-  <script src="/__/firebase/4.12.1/firebase-auth.js"></script>
-  <script src="/__/firebase/4.12.1/firebase-database.js"></script>
-  <script src="/__/firebase/4.12.1/firebase-messaging.js"></script>
-  <script src="/__/firebase/4.12.1/firebase-functions.js"></script>
-
-  <!-- Leave out Storage -->
-  <!-- <script src="/__/firebase/4.12.1/firebase-storage.js"></script> -->
-
-  <script src="/__/firebase/init.js"></script>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -248,6 +218,7 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
+
 
 </body>
 

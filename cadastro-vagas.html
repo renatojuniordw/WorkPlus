@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- firebase -->
+    <script src="node_modules/firebaseui/dist/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="node_modules/firebaseui/dist/firebaseui.css" />
+
+    <title>JOBS BLACKPLUS</title>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="js/configFire.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+    <script src="js/login.js"></script>
+
+    <script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
+
+
+</head>
+
+<body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">JOBS BLACKPLUS</span>
+            <span class="d-none d-lg-block">
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+            </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <p class="nav-link js-scroll-trigger" href="" id="usuario"></p>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="./index.html" id="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="" id="btnSair">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+            <div class="my-auto">
+                <h1 class="mb-0">Cadastre uma vaga
+                    <!-- <span class="text-primary">BLACK</span>PLUS -->
+                </h1>
+                <br>
+                <form action="">
+                    <!-- dadosEmpresas -->
+                    <div class="dadosEmpresas">
+                        <h3 class="mb-0">
+                            <span class="text-primary">Dados da Empresa</span>
+                        </h3>
+                        <br>
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="nmEmpresa" placeholder="Nome da Empresa" maxlength="30" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="cnpj" placeholder="CNPJ" maxlength="11" required>
+                            </div>
+                            <div class="col-sm-5">
+                                <input type="tel" class="form-control" id="telefone" placeholder="Telefone" maxlength="10" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-3">
+                                <input type="number" class="form-control" id="cep" placeholder="CEP" maxlength="10" required>
+                            </div>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="rua" placeholder="Rua" maxlength="60" required>
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="number" class="form-control" id="number" placeholder="Nº" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- dadosVaga -->
+                    <div class="dadosVaga">
+                        <h3 class="mb-0">
+                            <span class="text-primary">Dados da Vaga</span>
+                        </h3>
+                        <br>
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="nmVaga" placeholder="Nome da Vaga" maxlength="30" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-5">
+                                <select name="" id="tipoVaga" class="form-control" required>
+                                    <option value="0" selected disabled>Selecione um tipo de Vaga</option>
+                                    <option value="clt">CLT</option>
+                                    <option value="estagio">Estágio</option>
+                                    <option value="pj">PJ</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-5">
+                                <input type="number" class="form-control" id="qtVagas" placeholder="Qt Vagas" min="0" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <textarea name="" id="descVaga" class="form-control" cols="66" rows="5" placeholder="Descrição da Vaga" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10" style="text-align: right">
+                            <button id="btnCad" class="btn btn">CADASTRAR</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+    <script src="js/cadVagas.js"></script>
+
+</body>
+
+</html>
